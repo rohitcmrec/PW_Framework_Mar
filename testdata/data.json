@@ -1,0 +1,16 @@
+[
+    {
+        "firstName": "tom",
+        "lastName": "handerson",
+        "telephone": "5623559966",
+        "password": "success2",
+        "subs": "Yes"
+    },
+    {
+        "firstName": "som",
+        "lastName": "jackson",
+        "telephone": "5623559966",
+        "password": "success1",
+        "subs": "No"
+    }
+]
