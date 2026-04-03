@@ -3,6 +3,7 @@ import { Page, Locator } from '@playwright/test'
 import { RegisterPage } from './RegisterPage';
 import { LoginPage } from './LoginPage';
 import { HomePage } from './HomePage';
+import { SearchResultsPage } from './SearchResultsPage';
 
 export class MyAccount {
 
@@ -60,6 +61,17 @@ export class MyAccount {
             await this.searchBtn.click();
         } catch (error) {
             console.log(`Exception occured while clicking on search button`);
+            throw Error;
+        }
+    }
+
+    async searchProduct(productName: string): Promise<SearchResultsPage> {
+        try {
+            await this.enterProductName(productName);
+            await this.clickSearchBtn();
+            return new SearchResultsPage(this.page);
+        } catch (error) {
+            console.log(`Exception occurred while searching for product: ${error}`);
             throw Error;
         }
     }
