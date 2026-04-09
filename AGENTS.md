@@ -7,6 +7,7 @@ This file provides guidance to agents when working with code in this repository.
 - Single test title: `npx playwright test tests/RegisterPageTest.spec.ts -g "Userregistration page via faker library"`
 - Tagged suites are custom and project-specific: `npm run test:master`, `npm run test:sanity`, `npm run test:regression`, `npm run test:datadriven`, `npm run test:data`.
 - HTML reports are written to `reports/`; Allure is also enabled in `playwright.config.ts`.
+- `forbidOnly: true` is enabled in `playwright.config.ts` to prevent `test.only()` from being used; this ensures all tests run and prevents accidental commits that would skip tests.
 - Execution is intentionally serialized (`workers: 1`, `fullyParallel: false`); do not assume new tests are parallel-safe.
 - Base URL is not configured in Playwright `use`; tests read `appUrl` from `test.config.ts` and call `page.goto(...)` manually in `beforeEach`.
 - `test.config.ts` also holds real credentials and product assertions; changing it affects multiple specs.

@@ -87,7 +87,7 @@ test('Search for iMac and add to cart after login', { tag: ['@sanity', '@regress
     expect(successMessage).toContain('shopping cart');
 })
 
-test.only('Direct login and add iMac to cart - simplified', { tag: ['@sanity'] }, async ({ page }) => {
+test('Direct login and add iMac to cart - simplified', { tag: ['@sanity'] }, async ({ page }) => {
 
     // Navigate directly to login page
     await page.goto(config.appUrl + 'index.php?route=account/login');

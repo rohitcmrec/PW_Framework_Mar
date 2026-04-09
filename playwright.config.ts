@@ -4,8 +4,9 @@ import { userInfo } from 'node:os';
 export default defineConfig({
   timeout: 30 * 1000, //30000 ms(30 secs)
   testDir: './tests',
-  fullyParallel: false,
-  workers: 1,
+  fullyParallel: true,
+  workers: 5,
+  forbidOnly: true, // Fail if test.only is used (prevents accidental commits)
   //retries: 2,
   metadata: {
     appUsername: '',
