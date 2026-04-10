@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 30 * 1000, //30000 ms(30 secs)
   testDir: './tests',
   fullyParallel: true,
-  workers: 5,
+  workers: 4,
   forbidOnly: true, // Fail if test.only is used (prevents accidental commits)
   //retries: 2,
   metadata: {
