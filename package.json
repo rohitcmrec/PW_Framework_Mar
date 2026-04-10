@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:master": "PLAYWRIGHT_DASHBOARD=1 playwright test --grep @master",
+    "test:master": "playwright test --grep @master",
     "test:sanity": "playwright test --grep @sanity",
     "test:regression": "playwright test --grep @regression",
     "test:datadriven": "playwright test --grep @datadriven",
